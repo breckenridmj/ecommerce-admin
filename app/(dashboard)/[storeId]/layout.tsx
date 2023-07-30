@@ -19,18 +19,18 @@ export default async function DashboardLayout({
     const store = await prismadb.store.findFirst({
         where: {
             id: params.storeId,
-            userId
+            userId,
         }
     });
 
     if (!store) {
         redirect('/');
-    }
+    };
 
     return (
         <>
             <div>This will be a Navbar</div>
             {children}
         </>
-    )
-}
+    );
+};
