@@ -1,5 +1,5 @@
 export default function AuthLayout({
-    children
+    children,
 }: {
     children: React.ReactNode
 }) {
@@ -7,5 +7,5 @@ export default function AuthLayout({
         <div className="flex place-items-center justify-center h-full">
             {children}
         </div>
-    )
-}
+    );
+};
