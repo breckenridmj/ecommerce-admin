@@ -9,7 +9,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Admin Dashboard',
+  title: 'Dashboard',
   description: 'Admin Dashboard',
 }
 
@@ -28,5 +28,5 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
-  )
-}
+  );
+};
