@@ -2,8 +2,8 @@ import prismadb from "@/lib/prismadb";
 
 interface DashboardPageProps {
     params: {
-        storeId: string
-    }
+        storeId: string;
+    };
 };
 
 const DashboardPage: React.FC<DashboardPageProps> = async ({
