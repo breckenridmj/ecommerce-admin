@@ -5,7 +5,8 @@ import { stripe } from "@/lib/stripe";
 import prismadb from "@/lib/prismadb";
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  'Access-Control-Allow-Origin': '*',
+  "Access-Control-Allow-Credentials": "true",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
@@ -42,7 +43,7 @@ export async function POST(
         product_data: {
           name: product.name,
         },
-        unit_amount: product.price.toNumber() * 100
+        unit_amount: Number((product.price.toNumber() * 100).toFixed(2))
       }
     });
   });
